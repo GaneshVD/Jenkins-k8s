@@ -1,8 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: jenkins
   name: jenkins
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: j-app
