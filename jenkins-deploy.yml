@@ -18,10 +18,10 @@ spec:
         image: jenkins/jenkins:lts-jdk17
         ports:
         - containerPort: 8080
-      volumeMounts:
-      - devicePath: /var/jenkins_home
-        name: jenkins-data
-    volumes:
-    - name: jenkins-data
-      persistentVolumeClaim: 
-        claimName: jenkins-pvc
+        volumeMounts:
+        - mountPath: /var/jenkins_home
+          name: jenkins-data
+      volumes:
+      - name: jenkins-data
+        persistentVolumeClaim: 
+          claimName: jenkins-pvc
