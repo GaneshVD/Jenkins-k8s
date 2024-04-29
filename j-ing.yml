@@ -3,7 +3,11 @@ kind: Ingress
 metadata:
   name: j-ing
   namespace: jenkins
+  annotatioons:
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
   - host: gvdganesh.info
     http:
