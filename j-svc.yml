@@ -1,0 +1,10 @@
+kind: apiVersion: v1
+kind: Service
+metadata:
+  name: j-svc
+spec:
+  selector:
+    app: j-app
+  ports:
+  - port: 8080
+    targetPort: 8080
