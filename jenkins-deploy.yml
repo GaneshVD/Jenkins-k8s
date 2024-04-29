@@ -4,7 +4,7 @@ metadata:
   namespace: jenkins
   name: jenkins
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: j-app
@@ -24,4 +24,4 @@ spec:
       volumes:
       - name: jenkins-data
         persistentVolumeClaim: 
-          claimName: efs-claim
+          claimName: jenkins-pvc
