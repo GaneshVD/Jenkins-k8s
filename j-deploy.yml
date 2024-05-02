@@ -25,3 +25,6 @@ spec:
       - name: jenkins-data
         persistentVolumeClaim: 
           claimName: jenkins-pvc
+      securityContext:
+        fsgroup: 1000
+        runAsUser: 1000
